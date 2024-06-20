@@ -56,7 +56,9 @@ const storage = multer.diskStorage({
       res.status(500).json({ message: "Error uploading file" });
     }
   });
-  
+  app.get("/",(req,res)=>{
+    res.send("<h1>Welcome to NocodePortfolio</h1>")
+  })
   app.use("/images", express.static("D:/VTS PROS/NoCodePortfolio/frontend/src/assets/profileImages/"));
 
 app.listen(5000,()=>{
